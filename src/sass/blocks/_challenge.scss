@@ -1,0 +1,192 @@
+.challenge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: $tablet-width;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.challenge__title {
+  max-width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.challenge__rules {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.challenge__text {
+  margin: 0;
+  margin-bottom: 8px;
+
+  text-align: center;
+}
+
+.challenge__game {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.challenge__coffee {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+.challenge__counter {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+}
+
+.challenge__button {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 5px;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: $font-color;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background-image: linear-gradient(90deg, $main-color 0%, $secondary-color 100%);
+  border: 0;
+  cursor: pointer;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.challenge__sandbox {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+
+  span {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    width: 100%;
+    height: 100px;
+
+    background-color: #9f8d79;
+    border-bottom: 1px solid $font-color;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      display: block;
+      width: calc(100% / 3);
+      height: 100%;
+    }
+
+    &::before {
+      left: 0;
+
+      border-right: 1px solid $font-color;
+    }
+
+    &::after {
+      right: 0;
+
+      border-left: 1px solid $font-color;
+    }
+  }
+}
+
+.challenge__doge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  width: 100px;
+  height: 100px;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease-in-out;
+
+  &--1 {
+    transform: translateX(0) translateY(0);
+  }
+
+  &--2 {
+    transform: translateX(100px) translateY(0);
+  }
+
+  &--3 {
+    transform: translateX(200px) translateY(0);
+  }
+
+  &--4 {
+    transform: translateX(0) translateY(100px);
+  }
+
+  &--5 {
+    transform: translateX(100px) translateY(100px);
+  }
+
+  &--6 {
+    transform: translateX(200px) translateY(100px);
+  }
+
+  &--7 {
+    transform: translateX(0) translateY(200px);
+  }
+
+  &--8 {
+    transform: translateX(100px) translateY(200px);
+  }
+
+  &--9 {
+    transform: translateX(200px) translateY(200px);
+  }
+}

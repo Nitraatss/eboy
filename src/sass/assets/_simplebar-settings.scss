@@ -1,0 +1,22 @@
+.simplebar-scrollbar {
+  width: 6px !important;
+
+  &:before {
+    right: 0 !important;
+    left: 0 !important;
+
+    width: 6px !important;
+
+    background-color: #8c8c8c !important;
+    opacity: 1 !important;
+  }
+}
+
+.simplebar-track {
+  &.simplebar-vertical {
+    width: 6px !important;
+
+    background-color: transparent !important;
+    border-radius: 3px !important;
+  }
+}
